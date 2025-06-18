@@ -5,10 +5,14 @@ if status is-interactive
     # Aliases
     alias fetch="pfetch"
     alias paci="sudo pacman -S"
+    alias pacl="pacman -sS"
+    alias pacsu="sudo pacman -Syu"
+    alias pacu="sudo pacman -Su"
     alias q="exit"
     alias l="lsd -l"
     alias lout="hyprctl dispatch exit"
-
+    alias lgit="lazygit"
+    alias sus="systemctl suspend"
     # Wrap yazi with y and change cwd when exited
     function y
         set tmp (mktemp -t "yazi-cwd.XXXXXX")
