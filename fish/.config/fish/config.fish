@@ -13,6 +13,8 @@ if status is-interactive
     alias lout="hyprctl dispatch exit"
     alias lgit="lazygit"
     alias sus="systemctl suspend"
+    alias gitb="git branch"
+    alias gitc="git checkout"
     # Wrap yazi with y and change cwd when exited
     function y
         set tmp (mktemp -t "yazi-cwd.XXXXXX")
