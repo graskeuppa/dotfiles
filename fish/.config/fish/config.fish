@@ -15,6 +15,7 @@ if status is-interactive
     alias sus="systemctl suspend"
     alias gitb="git branch"
     alias gitc="git checkout"
+    alias gits="git status"
     # Wrap yazi with y and change cwd when exited
     function y
         set tmp (mktemp -t "yazi-cwd.XXXXXX")
