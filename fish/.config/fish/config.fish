@@ -17,6 +17,7 @@ if status is-interactive
     alias gitc="git checkout"
     alias gits="git status"
     alias snow="shutdown now"
+    alias n="nvim"
     # Wrap yazi with y and change cwd when exited
     function y
         set tmp (mktemp -t "yazi-cwd.XXXXXX")
