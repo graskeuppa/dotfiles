@@ -2,7 +2,7 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 
     set -gx EDITOR nvim
-    set -gx JAVA_HOME /usr/lib/jvm/java-24-openjdk
+    set -gx JAVA_HOME /usr/lib/jvm/java-21-openjdk
     set -gx PATH $JAVA_HOME/bin $PATH
     # Aliases
     alias fetch="pfetch"
