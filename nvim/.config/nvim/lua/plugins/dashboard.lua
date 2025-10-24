@@ -14,7 +14,7 @@ return {
           {
             pane = 2,
             { title = "What will it be today?\n", section = "keys", indent = 2, padding = 0 },
-            { title = "\n...or jump back into\n", section = "projects", indent = 2, padding = 0 },
+            { title = "\nJump back into\n", section = "projects", indent = 2, padding = 0 },
             --{ section = "startup" },
           },
         },
