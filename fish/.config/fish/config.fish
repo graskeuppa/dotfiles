@@ -16,12 +16,14 @@ if status is-interactive
     alias lgit="lazygit"
     alias sus="systemctl suspend"
     alias gtb="git branch"
-    alias gtc="git checkout"
+    alias gtch="git checkout"
     alias gts="git status"
     alias gtpu="git pull"
     alias gtp="git push"
+    alias gtc="git commit -m"
     alias snow="shutdown now"
     alias n="nvim"
+    alias c="clear"
     # Wrap yazi with y and change cwd when exited
     function y
         set tmp (mktemp -t "yazi-cwd.XXXXXX")
