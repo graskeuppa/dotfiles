@@ -38,4 +38,6 @@ if status is-interactive
         rm -f -- "$tmp"
     end
 
+    starship init fish | source
+
 end

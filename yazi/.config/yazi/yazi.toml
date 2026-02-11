@@ -1,5 +1,5 @@
 [mgr]
 show_hidden = true
-ratio = [2,2,2]
+ratio = [2,2,4]
 linemode = "mtime"
 
