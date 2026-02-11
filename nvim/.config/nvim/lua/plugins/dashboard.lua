@@ -7,7 +7,7 @@ return {
           {
             title = "The world is as big as you want it to be.\nWhere will you go next?\n",
             section = "terminal",
-            cmd = "chafa ~/dotfiles/backgrounds/.config/backgrounds/mtebott.jpg --format symbols --symbols vhalf --size 54x15 --stretch; sleep .1",
+            cmd = "chafa ~/dotfiles/images/mtebott.jpg --format symbols --symbols vhalf --size 54x15 --stretch; sleep .1",
             height = 15,
             padding = 1,
           },

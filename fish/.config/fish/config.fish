@@ -2,10 +2,17 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 
     set -gx EDITOR nvim
+    # zoxide
+    zoxide init fish | source
+    fish_add_path (brew --prefix)/opt/openjdk@21/bin
+    set -gx JAVA_HOME (brew --prefix)/opt/openjdk@21
+    fish_add_path (brew --prefix)/opt/openjdk@21/bin
+    set fish_greeting
+
     #    set -gx JAVA_HOME /usr/lib/jvm/java-21-openjdk
     #set -gx PATH $JAVA_HOME/bin $PATH
-    echo "fish_add_path (brew --prefix)/opt/openjdk@21/bin" >>~/.config/fish/config.fish
-    echo "set -gx JAVA_HOME (brew --prefix)/opt/openjdk@21" >>~/.config/fish/config.fish
+    #echo "fish_add_path (brew --prefix)/opt/openjdk@21/bin" >>~/.config/fish/config.fish
+    #echo "set -gx JAVA_HOME (brew --prefix)/opt/openjdk@21" >>~/.config/fish/config.fish
 
     # Aliases
     alias q="exit"
@@ -32,10 +39,3 @@ if status is-interactive
     end
 
 end
-
-# zoxide
-zoxide init fish | source
-fish_add_path (brew --prefix)/opt/openjdk@21/bin
-set -gx JAVA_HOME (brew --prefix)/opt/openjdk@21
-fish_add_path (brew --prefix)/opt/openjdk@21/bin
-set -gx JAVA_HOME (brew --prefix)/opt/openjdk@21
