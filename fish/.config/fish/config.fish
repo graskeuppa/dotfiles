@@ -2,17 +2,14 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 
     set -gx EDITOR nvim
-    set -gx JAVA_HOME /usr/lib/jvm/java-21-openjdk
-    set -gx PATH $JAVA_HOME/bin $PATH
+    #    set -gx JAVA_HOME /usr/lib/jvm/java-21-openjdk
+    #set -gx PATH $JAVA_HOME/bin $PATH
+    echo "fish_add_path (brew --prefix)/opt/openjdk@21/bin" >>~/.config/fish/config.fish
+    echo "set -gx JAVA_HOME (brew --prefix)/opt/openjdk@21" >>~/.config/fish/config.fish
+
     # Aliases
-    alias fetch="pfetch"
-    alias paci="sudo pacman -S"
-    alias pacl="pacman -sS"
-    alias pacsu="sudo pacman -Syu"
-    alias pacu="sudo pacman -Su"
     alias q="exit"
     alias l="lsd -l"
-    alias lout="hyprctl dispatch exit"
     alias lgit="lazygit"
     alias sus="systemctl suspend"
     alias gtb="git branch"
@@ -36,9 +33,9 @@ if status is-interactive
 
 end
 
-# oh-my-posh
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-oh-my-posh init fish --config ~/dotfiles/oh-my-posh/catppuccin_mocha.omp.json | source
-
 # zoxide
 zoxide init fish | source
+fish_add_path (brew --prefix)/opt/openjdk@21/bin
+set -gx JAVA_HOME (brew --prefix)/opt/openjdk@21
+fish_add_path (brew --prefix)/opt/openjdk@21/bin
+set -gx JAVA_HOME (brew --prefix)/opt/openjdk@21
