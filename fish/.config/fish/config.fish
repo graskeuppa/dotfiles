@@ -16,7 +16,7 @@ if status is-interactive
 
     # Aliases
     alias q="exit"
-    alias l="lsd -l"
+    alias l="lsd --blocks date,name"
     alias lgit="lazygit"
     alias sus="systemctl suspend"
     alias gtb="git branch"

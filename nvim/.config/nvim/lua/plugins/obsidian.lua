@@ -6,15 +6,10 @@ return {
   ---@type obsidian.config
   opts = {
     legacy_commands = false, -- this will be removed in the next major release
-    ui = { enable = false },
     workspaces = {
       {
-        name = "personal",
-        path = "~/vaults/personal",
-      },
-      {
-        name = "work",
-        path = "~/vaults/work",
+        name = "On life and automata",
+        path = "~/Documents/On life and automata/",
       },
     },
   },
