@@ -15,19 +15,21 @@ if status is-interactive
     #echo "set -gx JAVA_HOME (brew --prefix)/opt/openjdk@21" >>~/.config/fish/config.fish
 
     # Aliases
+    ## Common shortcuts
     alias q="exit"
     alias l="lsd --blocks date,name"
+    alias n="nvim"
+    alias c="clear"
+
+    ## Git
     alias lgit="lazygit"
-    alias sus="systemctl suspend"
     alias gtb="git branch"
     alias gtch="git checkout"
     alias gts="git status"
     alias gtpu="git pull"
     alias gtp="git push"
     alias gtc="git commit -m"
-    alias snow="shutdown now"
-    alias n="nvim"
-    alias c="clear"
+
     # Wrap yazi with y and change cwd when exited
     function y
         set tmp (mktemp -t "yazi-cwd.XXXXXX")
