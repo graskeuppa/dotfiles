@@ -46,3 +46,5 @@ end
 
 set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME
 set -gx PATH $HOME/.cabal/bin /Users/gras/.ghcup/bin $PATH # ghcup-env
+
+fish_add_path /Users/gras/.spicetify
