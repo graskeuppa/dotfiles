@@ -7,7 +7,9 @@ config-version = 2
 
 # You can use it to add commands that run after AeroSpace startup.
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
-after-startup-command = []
+after-startup-command = [
+  'exec-and-forget borders hidpi=on active_color=0xff89b4fa inactive_color=0xff494d64 width=3.0 blacklist="System Settings,Finder"'
+]
 
 # Start AeroSpace at login
 start-at-login = true
@@ -66,12 +68,12 @@ on-mode-changed = []
 #                 See:
 #                 https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
 [gaps]
-    inner.horizontal = 0
-    inner.vertical =   0
-    outer.left =       8
-    outer.bottom =     8
-    outer.top =        8
-    outer.right =      8
+    inner.horizontal = 4
+    inner.vertical =   4
+    outer.left =       16
+    outer.bottom =     16
+    outer.top =        16
+    outer.right =      16
 
 
 [[on-window-detected]]
@@ -146,7 +148,8 @@ on-mode-changed = []
 
 
     alt-g = "exec-and-forget open -a Ghostty"
-    alt-y = "exec-and-forget open -n -a Ghostty --args -e 'fish' '-i' '-c' 'y'"
+    alt-y = "exec-and-forget open -a Ghostty --args -e 'fish' '-i' '-c' 'y'"
+    # alt-y = "exec-and-forget open -n -a Ghostty --args -e 'fish' '-i' '-c' 'y'"
     alt-z = "exec-and-forget open -a Zen"
     # See: https://nikitabobko.github.io/AeroSpace/commands#layout
     alt-slash = 'layout tiles horizontal vertical'
