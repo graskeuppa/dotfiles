@@ -14,7 +14,7 @@ for sid in $(aerospace list-workspaces --all); do
     padding_right=2
     # label.padding_left=10
     label.padding_right=10
-    icon.highlight_color=$YELLOW
+    icon.highlight_color=$SKY
     label.font="sketchybar-app-font:Regular:14.0"
     # label.font="$FONT:Regular:9.0"
     label.background.height=26

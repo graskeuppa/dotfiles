@@ -16,29 +16,32 @@ COLOR=$TEXT
 case "${PERCENTAGE}" in
 9[0-9] | 100)
   ICON=$BATTERY_100
-  DRAWING=off
+  DRAWING=on
   ;;
 [6-8][0-9])
   ICON=$BATTERY_75
-  DRAWING=off
+  DRAWING=on
   ;;
 [3-5][0-9])
   ICON=$BATTERY_50
+  DRAWING=on
   ;;
 [1-2][0-9])
   ICON=$BATTERY_25
   COLOR=$PEACH
+  DRAWING=on
   ;;
 *)
   ICON=""
   COLOR=$RED
+  DRAWING=on
   ;;
 esac
 
 if [[ "$CHARGING" != "" ]]; then
-  ICON=""
+  ICON="􀋨"
   DRAWING=on
-  COLOR=$BLUE
+  COLOR=$TEAL
 fi
 
 # The item invoking this script (name $NAME) will get its icon and label
