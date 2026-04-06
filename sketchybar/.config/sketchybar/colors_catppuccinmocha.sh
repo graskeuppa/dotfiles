@@ -11,6 +11,12 @@ export PEACH=0xfffab387
 export MAROON=0xffeba0ac
 export MAUVE=0xffcba6f7
 export TEAL=0xff94e2d5
+export LAVENDER=0xffb4befe
+export SAPPHIRE=0xff74c7ec
+export SKY=0xff89dceb
+export PINK=0xfff5c2e7
+export FLAMINGO=0xfff2cdcd
+export ROSEWATER=0xfff5e0dc
 export SURFACE_2=0xff585b70
 export TRANSPARENT=0x00000000
 
