@@ -1,7 +1,42 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
-# The $SELECTED variable is available for space components and indicates if
-# the space invoking this script (with name: $NAME) is currently selected:
-# https://felixkratz.github.io/SketchyBar/config/components#space----associate-mission-control-spaces-with-an-item
+# $1 is the workspace ID passed from your sketchybarrc loop (e.g. script=".../space.sh $sid")
+SID="$1"
 
-sketchybar --set "$NAME" background.drawing="$SELECTED"
+update() {
+  # If SketchyBar starts up and FOCUSED_WORKSPACE is empty, fetch it manually
+  if [ -z "$FOCUSED_WORKSPACE" ]; then
+    FOCUSED_WORKSPACE=$(aerospace list-workspaces --focused)
+  fi
+
+  # Compare this item's ID with the currently focused workspace
+  if [ "$SID" = "$FOCUSED_WORKSPACE" ]; then
+    SELECTED="true"
+    WIDTH="0"
+  else
+    SELECTED="false"
+    WIDTH="dynamic"
+  fi
+
+  sketchybar --animate tanh 20 --set "$NAME" icon.highlight="$SELECTED" label.width="$WIDTH"
+}
+
+mouse_clicked() {
+  if [ "$BUTTON" = "right" ]; then
+    # AeroSpace doesn't "destroy" spaces like Yabai.
+    # Instead, right-clicking the pill will instantly throw your active window to that space!
+    aerospace move-node-to-workspace "$SID"
+  else
+    # Left-click to focus the workspace natively
+    aerospace workspace "$SID"
+  fi
+}
+
+case "$SENDER" in
+"mouse.clicked")
+  mouse_clicked
+  ;;
+*)
+  update
+  ;;
+esac

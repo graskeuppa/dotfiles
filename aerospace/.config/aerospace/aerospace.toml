@@ -8,9 +8,15 @@ config-version = 2
 # You can use it to add commands that run after AeroSpace startup.
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
 after-startup-command = [
-  'exec-and-forget borders hidpi=on active_color=0xff89b4fa inactive_color=0xff494d64 width=3.0 blacklist="System Settings,Finder"'
+  'exec-and-forget borders hidpi=on active_color=0xff89b4fa inactive_color=0xff494d64 width=3.0 blacklist="System Settings,Finder"',
+  'exec-and-forget sketchybar'
 ]
 
+
+# Notify Sketchybar about workspace change
+exec-on-workspace-change = ['/bin/bash', '-c',
+    'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE'
+]
 # Start AeroSpace at login
 start-at-login = true
 
@@ -80,8 +86,8 @@ on-mode-changed = []
   if.app-id= "com.apple.finder"
  run = [
   'layout floating',
-  'resize width 800',
-  'resize height 600', ]
+  'resize width 600',
+  'resize height 400', ]
 
 [[on-window-detected]]
   if.app-id= "net.whatsapp.WhatsApp"
@@ -189,7 +195,7 @@ on-mode-changed = []
     
 
   
-    alt-shift-f = 'fullscreen'
+    alt-shift-f = ['fullscreen', 'exec-and-forget sketchybar --trigger aerospace_mode_change']
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
 #alt-tab = 'workspace-back-and-forth'
