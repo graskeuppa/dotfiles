@@ -3,8 +3,9 @@
 source "$HOME/.config/sketchybar/colors_catppuccinmocha.sh"
 source "$HOME/.config/sketchybar/icons.sh"
 # 1. Check if the focused window is fullscreen in AeroSpace
+FOCUSED_WORKSPACE=$(aerospace list-workspaces --focused)
 AERO_FULLSCREEN=$(aerospace list-windows --focused --format "%{window-is-fullscreen}" 2>/dev/null)
-LAYOUT_STATE=$(cat /tmp/aerospace_layout 2>/dev/null)
+LAYOUT_STATE=$(cat "/tmp/aerospace_layout_$FOCUSED_WORKSPACE" 2>/dev/null)
 
 # 2. Logic to determine the state and assign icons/colors
 if [ "$AERO_FULLSCREEN" = "true" ]; then
@@ -18,7 +19,7 @@ else
 fi
 
 # Check if the floating toggle file exists
-if [ -f /tmp/aerospace_floating ]; then
+if [ -f "/tmp/aerospace_floating_$FOCUSED_WORKSPACE" ]; then
   IS_FLOATING="true"
 else
   IS_FLOATING="false"
@@ -31,15 +32,16 @@ if [ "$AERO_FULLSCREEN" = "true" ]; then
   COLOR=$MAUVE
 elif [ "$IS_FLOATING" = "true" ]; then
   # Floating
-  ICON=$FLOATING COLOR=$MAUVE
+  ICON=$FLOATING
+  COLOR=$TEAL
 elif [ "$LAYOUT_STATE" = "accordion" ]; then
   # Accordion / Stacked
   ICON=$ACCORDION
-  COLOR=$MAUVE
+  COLOR=$SKY
 else
   # Default: Tiling (Grid)
   ICON=$GRID
-  COLOR=$MAUVE
+  COLOR=$SAPPHIRE
 fi
 
 # 3. Push the update to your SketchyBar item

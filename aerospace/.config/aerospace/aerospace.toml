@@ -159,9 +159,9 @@ on-mode-changed = []
     alt-z = "exec-and-forget open -a Zen"
     # See: https://nikitabobko.github.io/AeroSpace/commands#layout
     # alt-slash = 'layout tiles horizontal vertical'
-    alt-slash = ['layout tiles horizontal vertical','exec-and-forget echo "tiles" > /tmp/aerospace_layout && sketchybar --trigger aerospace_mode_change']
+    alt-slash = ['layout tiles horizontal vertical','exec-and-forget ~/.config/sketchybar/plugins/set_layout.sh tiles']
     # alt-comma = 'layout accordion horizontal vertical'
-    alt-comma = ['layout accordion horizontal vertical', 'exec-and-forget echo "accordion" > /tmp/aerospace_layout && sketchybar --trigger aerospace_mode_change']
+    alt-comma = ['layout accordion horizontal vertical', 'exec-and-forget ~/.config/sketchybar/plugins/set_layout.sh accordion']
     # See: https://nikitabobko.github.io/AeroSpace/commands#focus
     alt-h = 'focus left'
     alt-j = 'focus down'
@@ -212,7 +212,7 @@ on-mode-changed = []
     esc = ['reload-config', 'mode main']
     r = ['flatten-workspace-tree', 'mode main'] # reset layout
     # f = ['layout floating tiling', 'mode main'] # Toggle between floating and tiling layout
-    f = ['layout floating tiling', 'exec-and-forget bash -c "[ -f /tmp/aerospace_floating ] && rm /tmp/aerospace_floating || touch /tmp/aerospace_floating" && sketchybar --trigger aerospace_mode_change', 'mode main']
+    f = ['layout floating tiling', 'exec-and-forget ~/.config/sketchybar/plugins/set_layout.sh toggle_floating']
     backspace = ['close-all-windows-but-current', 'mode main']
 
     # sticky is not yet supported https://github.com/nikitabobko/AeroSpace/issues/2
