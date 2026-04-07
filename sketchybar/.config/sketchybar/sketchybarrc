@@ -9,7 +9,7 @@ ITEM_DIR="$HOME/.config/sketchybar/items"
 FONT="JetBrainsMono Nerd Font"
 PADDINGS=3
 
-launchctl unload -F /System/Library/LaunchAgents/com.apple.OSDUIHelper.plist >/dev/null 2>&1 &
+# launchctl unload -F /System/Library/LaunchAgents/com.apple.OSDUIHelper.plist >/dev/null 2>&1 &
 
 # General bar appearance
 bar=(

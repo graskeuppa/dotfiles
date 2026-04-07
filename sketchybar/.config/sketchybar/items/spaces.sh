@@ -7,14 +7,14 @@ sketchybar --add event aerospace_workspace_change
 for sid in $(aerospace list-workspaces --all); do
   space=(
     icon="$sid" # Use the AeroSpace workspace name as the icon
-    icon.y_offset=0
+    icon.y_offset=1
     icon.padding_left=10
     icon.padding_right=15
     padding_left=2
     padding_right=2
     # label.padding_left=10
     label.padding_right=10
-    icon.highlight_color=$SKY
+    icon.highlight_color=$BLUE
     label.font="sketchybar-app-font:Regular:14.0"
     # label.font="$FONT:Regular:9.0"
     label.background.height=26
@@ -23,6 +23,7 @@ for sid in $(aerospace list-workspaces --all); do
     label.background.corner_radius=8
     label.drawing=off
     label.y_offset=-1
+    label.color=$TEXT
     # Pass the $sid to the script so it knows which workspace it's updating
     script="$PLUGIN_DIR/space.sh $sid"
     # Switch AeroSpace workspace when clicked!

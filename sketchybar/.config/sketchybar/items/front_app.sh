@@ -8,8 +8,8 @@ aerospace_mode=(
   icon.font="$FONT:Bold:16.0"
   label.drawing=off
   icon.width=30
-  icon="$YABAI_GRID" # Default icon (you can change this!)
-  icon.color=$PEACH
+  icon="$GRID" # Default icon (you can change this!)
+  icon.color=$RED
   associated_display=active
 )
 
