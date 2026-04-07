@@ -457,7 +457,7 @@ function __icon_map() {
     icon_result=":gemini:"
     ;;
   "Ghostty")
-    icon_result=":terminal:"
+    icon_result=":ghostty:"
     ;;
   "GIMP")
     icon_result=":gimp:"
@@ -1366,7 +1366,7 @@ function __icon_map() {
     icon_result=":zed:"
     ;;
   "Zen" | "Zen Browser")
-    icon_result=":firefox:"
+    icon_result=":zen_browser:"
     ;;
   "Zeplin")
     icon_result=":zeplin:"
