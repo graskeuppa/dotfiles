@@ -9,8 +9,6 @@ ITEM_DIR="$HOME/.config/sketchybar/items"
 FONT="JetBrainsMono Nerd Font"
 PADDINGS=3
 
-# launchctl unload -F /System/Library/LaunchAgents/com.apple.OSDUIHelper.plist >/dev/null 2>&1 &
-
 # General bar appearance
 bar=(
   height=40
@@ -59,7 +57,7 @@ source "$ITEM_DIR/spaces.sh"
 source "$ITEM_DIR/front_app.sh"
 
 # Center
-# source "$ITEM_DIR/spotify.sh"
+source "$ITEM_DIR/spotify.sh"
 
 # Right
 source "$ITEM_DIR/calendar.sh"
