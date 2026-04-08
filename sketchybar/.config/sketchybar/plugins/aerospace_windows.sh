@@ -26,12 +26,15 @@ update_windows_on_spaces() {
           # THE TERMINAL APP OVERRIDES
           # --------------------------------------------------------
           if [ "$app" = "Ghostty" ]; then
-            # We only check what the title STARTS WITH to avoid folder name mix-ups!
+            # Order matters! The first match wins.
             case "$title" in
-            nvim* | n*) icon=":neovim:" ;;       # Neovim
-            yazi* | y* | Yazi*) icon=":yazi:" ;; # Yazi (Folder icon)
+            # 1. Check Yazi first. This catches "yazi: ~/.config/nvim" before the nvim rule can get confused by it.
+            [Yy]azi* | *yazi*) icon=":yazi:" ;;
+
+            # 2. Now it is safe to use wildcards for Neovim, catching titles like "filename.txt - NVIM"
+            *[Nn]vim* | *[Vv]im* | n | n\ *) icon=":neovim:" ;;
             *)
-              # If it's none of the above, just show the Ghostty icon
+              # If it's none of the above, just show the normal Ghostty icon
               __icon_map "$app"
               icon="$icon_result"
               ;;

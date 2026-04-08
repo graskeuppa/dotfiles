@@ -14,7 +14,7 @@ PADDINGS=3
 # General bar appearance
 bar=(
   height=40
-  color=$BASE
+  color=$BASE_SOLID
   shadow=on
   position=top
   sticky=on
