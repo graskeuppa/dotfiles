@@ -22,6 +22,7 @@ export TRANSPARENT=0x00000000
 
 # General bar colors
 export BASE=0xa01e1e2e
+export BASE_SOLID=0xff1e1e2e
 export ICON_COLOR=$TEXT     # Color of all icons
 export LABEL_COLOR=$TEXT    # Color of all labels
 export SURFACE_0=0x903c3e4f #bg1->sf0
