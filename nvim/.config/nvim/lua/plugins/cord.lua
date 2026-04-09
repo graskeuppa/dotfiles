@@ -4,7 +4,7 @@ return {
   build = ":Cord update",
   opts = {
     display = {
-      theme = "atom",
+      theme = "minecraft",
       flavor = "accent",
     },
   },
