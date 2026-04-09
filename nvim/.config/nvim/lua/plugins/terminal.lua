@@ -15,7 +15,7 @@ return {
           width = 0.5,
           height = 0.4,
           col = 0.9,
-          row = 0.55,
+          row = 0,
         },
       },
     },
