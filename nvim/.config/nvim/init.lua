@@ -2,3 +2,4 @@
 require("config.lazy")
 vim.cmd("Copilot disable")
 vim.opt.title = true
+vim.opt.cmdheight = 0
