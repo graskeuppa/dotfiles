@@ -1140,7 +1140,7 @@ function __icon_map() {
   "Spotlight")
     icon_result=":spotlight:"
     ;;
-  "Steam" | "Steam Helper")
+  "Steam" | "Steam Helper" | "steamwebhelper.exe")
     icon_result=":steam:"
     ;;
   "Stickies")
