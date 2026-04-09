@@ -22,7 +22,7 @@ if status is-interactive
     alias c="clear"
 
     ## Git
-    alias lgit="lazygit"
+    alias lg="lazygit"
     alias gtb="git branch"
     alias gtch="git checkout"
     alias gts="git status"
