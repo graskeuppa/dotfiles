@@ -117,6 +117,10 @@ on-mode-changed = []
   if.app-id= "com.apple.clock"
   run = ['move-node-to-workspace 3']
 
+[[on-window-detected]]
+if.app-name-regex-substring = 'steamwebhelper'
+run = 'layout floating'
+
 
 
 # 'main' binding mode declaration
