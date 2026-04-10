@@ -45,8 +45,8 @@ bracket_props=(
 )
 
 separator=(
-  icon=􀆊
-  icon.font="$FONT:Heavy:16.0"
+  icon=􀆓
+  icon.font="$FONT:Bold:14.0"
   padding_left=15
   padding_right=15
   label.drawing=off

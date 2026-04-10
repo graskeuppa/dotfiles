@@ -32,7 +32,9 @@ update_windows_on_spaces() {
             [Yy]azi* | *yazi*) icon=":yazi:" ;;
 
             # 2. Now it is safe to use wildcards for Neovim, catching titles like "filename.txt - NVIM"
-            *[Nn]vim* | *[Vv]im* | n | n\ *) icon=":neovim:" ;;
+            *[Nn]vim* | *[Vv]im* | n | n\ *) icon=":vim:" ;;
+            *[Ss]potify*) icon=":spotify:" ;;
+
             *)
               # If it's none of the above, just show the normal Ghostty icon
               __icon_map "$app"

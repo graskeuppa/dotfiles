@@ -194,8 +194,8 @@ run = 'layout floating'
     alt-shift-1 = 'move-node-to-workspace 1'
     alt-shift-2 = 'move-node-to-workspace 2'
     alt-shift-3 = 'move-node-to-workspace 3'
-    alt-shift-q = 'move-node-to-workspace 4'
-    alt-shift-w = "move-node-to-workspace 5"
+    alt-shift-q = 'move-node-to-workspace Q'
+    alt-shift-w = "move-node-to-workspace W"
     alt-shift-s = 'move-node-to-workspace S'
     
 
