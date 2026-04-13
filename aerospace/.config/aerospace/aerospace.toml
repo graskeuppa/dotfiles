@@ -159,6 +159,10 @@ run = 'layout floating'
 
     alt-g = "exec-and-forget open -a Ghostty"
     alt-y = "exec-and-forget open -a Ghostty --args -e 'fish' '-i' '-c' 'y'"
+    # alt-p= "exec-and-forget open -a Ghostty --args -e 'fish' '-i' '-c' 'spotify_player'"
+    # alt-p= "exec-and-forget open -a Ghostty --args -e 'fish' '-i' '-c' 'spotify_player'"
+    alt-p = 'exec-and-forget open -a Ghostty --args -e /opt/homebrew/bin/spotify_player'
+
     # alt-y = "exec-and-forget open -n -a Ghostty --args -e 'fish' '-i' '-c' 'y'"
     alt-z = "exec-and-forget open -a Zen"
     # See: https://nikitabobko.github.io/AeroSpace/commands#layout
