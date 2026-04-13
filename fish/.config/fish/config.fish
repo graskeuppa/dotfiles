@@ -14,12 +14,12 @@ if status is-interactive
     #echo "fish_add_path (brew --prefix)/opt/openjdk@21/bin" >>~/.config/fish/config.fish
     #echo "set -gx JAVA_HOME (brew --prefix)/opt/openjdk@21" >>~/.config/fish/config.fish
 
-    # Aliases
     ## Common shortcuts
     alias q="exit"
     alias l="lsd --blocks date,name"
     alias n="nvim"
     alias c="clear"
+    alias s="spotify_player"
 
     ## Git
     alias lg="lazygit"
