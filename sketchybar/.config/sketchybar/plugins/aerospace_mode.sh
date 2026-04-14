@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-# Ensure SketchyBar has the correct paths to find AeroSpace
 export PATH="$PATH:/opt/homebrew/bin:/usr/local/bin"
 
 source "$HOME/.config/sketchybar/colors_catppuccinmocha.sh"

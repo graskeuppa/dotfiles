@@ -2,13 +2,12 @@
 
 FRONT_APP_SCRIPT='sketchybar --set $NAME label="$INFO"'
 
-# 1. Replace 'yabai' with an 'aerospace' mode indicator
 aerospace_mode=(
   script="$PLUGIN_DIR/aerospace_mode.sh"
   icon.font="$FONT:Bold:16.0"
   label.drawing=off
   icon.width=30
-  icon="$GRID" # Default icon (you can change this!)
+  icon="$GRID"
   icon.color=$RED
   associated_display=active
 )
@@ -22,10 +21,8 @@ front_app=(
   associated_display=active
 )
 
-# 2. Register the custom AeroSpace mode event
 sketchybar --add event aerospace_mode_change
 
-# 3. Add the items and subscribe them
 sketchybar --add item aerospace left \
   --set aerospace "${aerospace_mode[@]}" \
   --subscribe aerospace aerospace_mode_change front_app_switched space_change \
