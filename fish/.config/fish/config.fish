@@ -30,6 +30,9 @@ if status is-interactive
     alias gtp="git push"
     alias gtc="git commit -m"
 
+    ## WM
+    alias float='pkill -f "AeroSpace|borders|sketchybar" '
+
     # Wrap yazi with y and change cwd when exited
     function y
         set tmp (mktemp -t "yazi-cwd.XXXXXX")
