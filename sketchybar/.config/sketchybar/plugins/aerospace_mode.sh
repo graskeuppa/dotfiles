@@ -23,7 +23,7 @@ fi
 if [ "$IS_FULLSCREEN" = "true" ]; then
   # Fullscreen
   ICON=$FULLSCREEN
-  COLOR=$MAUVE
+  COLOR=$PINK
 elif [ "$IS_FLOATING" = "true" ]; then
   # Floating
   ICON=$FLOATING
