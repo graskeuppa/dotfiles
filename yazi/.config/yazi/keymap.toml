@@ -1,4 +1,8 @@
 [[mgr.prepend_keymap]]
+on  = [ "F", "G" ]
+run = "plugin yafg"
+
+[[mgr.prepend_keymap]]
 on  = "M"
 run = "plugin mount"
 
