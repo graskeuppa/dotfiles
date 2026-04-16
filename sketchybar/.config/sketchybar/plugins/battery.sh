@@ -26,9 +26,14 @@ case "${PERCENTAGE}" in
   ICON=$BATTERY_50
   DRAWING=on
   ;;
-[1-2][0-9])
+2[0-9])
   ICON=$BATTERY_25
   COLOR=$PEACH
+  DRAWING=on
+  ;;
+[0-1][0-9])
+  ICON=$BATTERY_25
+  COLOR=$RED
   DRAWING=on
   ;;
 *)

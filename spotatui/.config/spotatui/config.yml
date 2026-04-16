@@ -34,11 +34,11 @@ keybindings:
 behavior:
   seek_milliseconds: 5000
   volume_increment: 10
-  volume_percent: 100
+  volume_percent: 60
   tick_rate_milliseconds: 16
-  enable_text_emphasis: true
+  enable_text_emphasis: false
   show_loading_indicator: true
-  enforce_wide_search_bar: false
+  enforce_wide_search_bar: true
   enable_global_song_count: false
   enable_discord_rpc: true
   discord_rpc_client_id: null
@@ -53,19 +53,19 @@ behavior:
   repeat_context_icon: 􀊞
   playing_icon: 􀊄
   paused_icon: 􀊆
-  set_window_title: true
+  set_window_title: false
   visualizer_style: BarGraph
   dismissed_announcements: []
   relay_server_url: wss://spotatui-party.spotatui.workers.dev/ws
   stop_after_current_track: false
   sidebar_width_percent: 30
-  playbar_height_rows: 8
+  playbar_height_rows: 6
   library_height_percent: 30
   startup_behavior: continue
   disable_auto_update: false
   auto_update_delay: '0'
   draw_cover_art: true
-  draw_cover_art_forced: false
+  draw_cover_art_forced: true
 theme:
   active: 180, 190, 254
   banner: 180, 190, 254
