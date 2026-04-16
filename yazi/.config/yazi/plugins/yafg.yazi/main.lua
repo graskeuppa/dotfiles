@@ -70,7 +70,7 @@ function M.run_with(cwd)
         fzf --ansi --disabled --multi \
             --bind "start:reload:${RG_PREFIX} {q}" \
             --bind "change:reload:sleep 0.1; ${RG_PREFIX} {q} || true" \
-            --bind "ctrl-t:transform:[[ ! \${FZF_PROMPT} =~ ripgrep ]] &&
+            --bind "f4:transform:[[ ! \${FZF_PROMPT} =~ ripgrep ]] &&
                    echo 'rebind(change)+change-prompt(1. ripgrep> )+disable-search+reload:${RG_PREFIX} \{q} || true' ||
                    echo 'unbind(change)+change-prompt(2. fzf> )+enable-search+reload:${RG_PREFIX} \"\" || true'" \
             --color "hl:-1:underline,hl+:-1:underline:reverse" \
