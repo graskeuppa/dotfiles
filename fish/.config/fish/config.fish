@@ -19,7 +19,7 @@ if status is-interactive
     alias l="lsd --blocks date,name"
     alias n="nvim"
     alias c="clear"
-    alias s="spotify_player"
+    alias s="spotatui"
 
     ## Git
     alias lg="lazygit"

@@ -447,7 +447,7 @@ function __icon_map() {
   "Fusion")
     icon_result=":fusion:"
     ;;
-  "Games")
+  "Games" | "CrossOver")
     icon_result=":games:"
     ;;
   "System Preferences" | "System Settings" | "系统设置" | "Réglages Système" | "システム設定" | "Systemeinstellungen" | "System­einstellungen")
