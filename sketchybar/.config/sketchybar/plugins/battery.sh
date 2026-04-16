@@ -37,7 +37,7 @@ case "${PERCENTAGE}" in
   DRAWING=on
   ;;
 *)
-  ICON=""
+  ICON=$BATTERY_0
   COLOR=$RED
   DRAWING=on
   ;;
@@ -50,5 +50,5 @@ if [[ "$CHARGING" != "" ]]; then
 fi
 
 # The item invoking this script (name $NAME) will get its icon and label
-# updated with the current battery status
-sketchybar --set "$NAME" drawing="$DRAWING" icon="$ICON" icon.color="$COLOR"
+# updated with the current battery
+sketchybar --animate tanh 60 --set "$NAME" drawing="$DRAWING" icon="$ICON" icon.color="$COLOR"

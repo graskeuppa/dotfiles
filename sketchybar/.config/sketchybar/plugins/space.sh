@@ -18,7 +18,7 @@ update() {
     WIDTH="dynamic"
   fi
 
-  sketchybar --animate tanh 20 --set "$NAME" icon.highlight="$SELECTED" label.width="$WIDTH"
+  sketchybar --animate tanh 10 --set "$NAME" icon.highlight="$SELECTED" label.width="$WIDTH"
 }
 
 mouse_clicked() {
