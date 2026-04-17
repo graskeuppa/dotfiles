@@ -741,7 +741,7 @@ function __icon_map() {
   "Min")
     icon_result=":min_browser:"
     ;;
-  "Minecraft" | "Minecraft Launcher")
+  "Minecraft" | "Minecraft Launcher" | "Prism Launcher")
     icon_result=":minecraft:"
     ;;
   "Miro")

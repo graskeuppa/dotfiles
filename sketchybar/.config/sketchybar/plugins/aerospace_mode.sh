@@ -18,24 +18,58 @@ else
   IS_FLOATING="false"
 fi
 
+# # 3. Determine the icon and color based on the state hierarchy
+# if [ "$IS_FULLSCREEN" = "true" ]; then
+#   # Fullscreen
+#   ICON=$FULLSCREEN
+#   COLOR=$PINK
+# elif [ "$IS_FLOATING" = "true" ]; then
+#   # Floating
+#   ICON=$FLOATING
+#   COLOR=$MAUVE
+# elif [[ "$LAYOUT_STATE" == *"accordion"* ]]; then
+#   # Accordion / Stacked
+#   ICON=$ACCORDION
+#   COLOR=$LAVENDER
+# else
+#   # Default: Tiling (Grid)
+#   ICON=$GRID
+#   COLOR=$LAVENDER
+# fi
 # 3. Determine the icon and color based on the state hierarchy
 if [ "$IS_FULLSCREEN" = "true" ]; then
   # Fullscreen
   ICON=$FULLSCREEN
-  COLOR=$PINK
+  COLOR=$MAUVE
 elif [ "$IS_FLOATING" = "true" ]; then
   # Floating
   ICON=$FLOATING
-  COLOR=$MAUVE
-elif [[ "$LAYOUT_STATE" == *"accordion"* ]]; then
-  # Accordion / Stacked
-  ICON=$ACCORDION
+  COLOR=$TEAL
+elif [[ "$LAYOUT_STATE" == *"v_accordion"* ]]; then
+  # Vertical Accordion
+  ICON=$V_ACCORDION
   COLOR=$LAVENDER
+elif [[ "$LAYOUT_STATE" == *"h_accordion"* ]]; then
+  # Horizontal Accordion
+  ICON=$H_ACCORDION
+  COLOR=$LAVENDER
+elif [[ "$LAYOUT_STATE" == *"v_tiles"* ]]; then
+  # Vertical Grid
+  ICON=$V_GRID
+  COLOR=$LAVENDER
+elif [[ "$LAYOUT_STATE" == *"h_tiles"* ]]; then
+  # Horizontal Grid
+  ICON=$H_GRID
+  COLOR=$LAVENDER
+elif [[ "$LAYOUT_STATE" == *"accordion"* ]]; then
+  # Fallback just in case it only says "accordion"
+  ICON=$V_ACCORDION
+  COLOR=$PEACH
 else
-  # Default: Tiling (Grid)
-  ICON=$GRID
+  # Default Fallback
+  ICON=$H_GRID
   COLOR=$LAVENDER
 fi
 
 # Push the update to your SketchyBar item
-sketchybar --set aerospace icon="$ICON" icon.color=$COLOR
+sketchybar --animate linear 10 --set aerospace icon="$ICON" icon.color=$COLOR

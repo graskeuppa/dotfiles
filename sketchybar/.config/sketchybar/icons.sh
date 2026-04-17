@@ -12,8 +12,12 @@ BELL_DOT=􀝗
 # AeroSpace Icons
 FULLSCREEN=􀾘
 GRID=􀕯
+V_GRID=􀕱
+H_GRID=􀘜
 FLOATING=􃕟
 ACCORDION=􀰴
+V_ACCORDION=􀐟
+H_ACCORDION=􀐝
 
 # Battery Icons
 BATTERY_100=􀛨

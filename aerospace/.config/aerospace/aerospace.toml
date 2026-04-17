@@ -8,7 +8,7 @@ config-version = 2
 # You can use it to add commands that run after AeroSpace startup.
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
 after-startup-command = [
-  'exec-and-forget borders hidpi=on active_color=0xff89b4fa inactive_color=0xff494d64 width=5.0 blacklist="System Settings,Finder",java,',
+  'exec-and-forget borders hidpi=on active_color=0xff89b4fa inactive_color=0xff494d64 width=3.0 blacklist="System Settings,Finder",java,',
   'exec-and-forget sketchybar'
 ]
 
@@ -173,10 +173,20 @@ run = 'layout floating'
     # alt-y = "exec-and-forget open -n -a Ghostty --args -e 'fish' '-i' '-c' 'y'"
     alt-z = "exec-and-forget open -a Zen"
     # See: https://nikitabobko.github.io/AeroSpace/commands#layout
-    # alt-slash = 'layout tiles horizontal vertical'
-    alt-slash = ['layout tiles horizontal vertical','exec-and-forget ~/.config/sketchybar/plugins/set_layout.sh tiles']
-    # alt-comma = 'layout accordion horizontal vertical'
-    alt-comma = ['layout accordion horizontal vertical', 'exec-and-forget ~/.config/sketchybar/plugins/set_layout.sh accordion']
+
+# --- GRID BINDINGS ---
+# Horizontal Split
+alt-slash = ['layout tiles horizontal', 'exec-and-forget ~/.config/sketchybar/plugins/set_layout.sh h_tiles']
+# Vertical Split
+alt-shift-slash = ['layout tiles vertical', 'exec-and-forget ~/.config/sketchybar/plugins/set_layout.sh v_tiles']
+
+# --- ACCORDION BINDINGS ---
+# Horizontal Accordion
+alt-comma = ['layout accordion horizontal', 'exec-and-forget ~/.config/sketchybar/plugins/set_layout.sh h_accordion']
+# Vertical Accordion
+alt-shift-comma = ['layout accordion vertical', 'exec-and-forget ~/.config/sketchybar/plugins/set_layout.sh v_accordion']   
+
+
     # See: https://nikitabobko.github.io/AeroSpace/commands#focus
     alt-h = 'focus left'
     alt-j = 'focus down'
