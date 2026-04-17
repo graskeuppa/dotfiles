@@ -33,7 +33,7 @@ update_windows_on_spaces() {
 
             # 2. Now it is safe to use wildcards for Neovim, catching titles like "filename.txt - NVIM"
             *[Nn]vim* | *[Vv]im* | n | n\ *) icon=":vim:" ;;
-            *[Ss]potify* | s*) icon=":spotify:" ;;
+            *[Ss]poti* | s*) icon=":spotify:" ;;
 
             *)
               # If it's none of the above, just show the normal Ghostty icon
@@ -60,7 +60,7 @@ update_windows_on_spaces() {
   done
 
   if [ ${#args[@]} -gt 0 ]; then
-    sketchybar "${args[@]}"
+    sketchybar --animate cos 20 "${args[@]}" # Remove the animate flag if you're hiding the current workspace's icons!
   fi
 }
 

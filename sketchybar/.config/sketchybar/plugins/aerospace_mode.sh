@@ -18,24 +18,6 @@ else
   IS_FLOATING="false"
 fi
 
-# # 3. Determine the icon and color based on the state hierarchy
-# if [ "$IS_FULLSCREEN" = "true" ]; then
-#   # Fullscreen
-#   ICON=$FULLSCREEN
-#   COLOR=$PINK
-# elif [ "$IS_FLOATING" = "true" ]; then
-#   # Floating
-#   ICON=$FLOATING
-#   COLOR=$MAUVE
-# elif [[ "$LAYOUT_STATE" == *"accordion"* ]]; then
-#   # Accordion / Stacked
-#   ICON=$ACCORDION
-#   COLOR=$LAVENDER
-# else
-#   # Default: Tiling (Grid)
-#   ICON=$GRID
-#   COLOR=$LAVENDER
-# fi
 # 3. Determine the icon and color based on the state hierarchy
 if [ "$IS_FULLSCREEN" = "true" ]; then
   # Fullscreen

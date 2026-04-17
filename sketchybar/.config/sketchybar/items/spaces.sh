@@ -1,5 +1,6 @@
 #!/bin/bash
 
+source "$HOME/.config/sketchybar/icons.sh"
 sketchybar --add event aerospace_workspace_change
 
 for sid in $(aerospace list-workspaces --all); do
@@ -38,8 +39,8 @@ bracket_props=(
 )
 
 separator=(
-  icon=􀆓
-  icon.font="$FONT:Bold:14.0"
+  icon=$SEPARATOR
+  icon.font="$FONT:Bold:8.0"
   padding_left=15
   padding_right=15
   label.drawing=off

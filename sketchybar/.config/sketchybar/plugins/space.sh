@@ -12,13 +12,13 @@ update() {
   # Compare this item's ID with the currently focused workspace
   if [ "$SID" = "$FOCUSED_WORKSPACE" ]; then
     SELECTED="true"
-    WIDTH="0"
+    WIDTH="dynamic" # Change this to 0 to hide the app icon when on a selected workspace
   else
     SELECTED="false"
     WIDTH="dynamic"
   fi
 
-  sketchybar --animate tanh 5 --set "$NAME" icon.highlight="$SELECTED" label.width="$WIDTH"
+  sketchybar --animate tanh 15 --set "$NAME" icon.highlight="$SELECTED" label.width="$WIDTH"
 }
 
 mouse_clicked() {
