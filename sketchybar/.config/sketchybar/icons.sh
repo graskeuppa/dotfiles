@@ -1,13 +1,10 @@
 #!/bin/bash
 
 # General Icons
-LOADING=􀖇
 APPLE=􀣺
 PREFERENCES=􀺽
 ACTIVITY=􀒓
 LOCK=􀒳
-BELL=􀋚
-BELL_DOT=􀝗
 
 # AeroSpace Icons
 FULLSCREEN=􀾘
@@ -27,7 +24,6 @@ BATTERY_50=􀺶
 BATTERY_25=􀛩
 BATTERY_0=􀛪
 BATTERY_CHARGING=􀢋
-BATTER_CHARGING_ALT="􀋨"
 
 # Volume Icons
 VOLUME_100=􀊩
