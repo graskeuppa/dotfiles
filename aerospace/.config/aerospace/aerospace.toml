@@ -176,9 +176,9 @@ run = 'layout floating'
 
 # --- GRID BINDINGS ---
 # Horizontal Split
-alt-slash = ['layout tiles horizontal', 'exec-and-forget ~/.config/sketchybar/plugins/set_layout.sh h_tiles']
+alt-period = ['layout tiles horizontal', 'exec-and-forget ~/.config/sketchybar/plugins/set_layout.sh h_tiles']
 # Vertical Split
-alt-shift-slash = ['layout tiles vertical', 'exec-and-forget ~/.config/sketchybar/plugins/set_layout.sh v_tiles']
+alt-shift-period = ['layout tiles vertical', 'exec-and-forget ~/.config/sketchybar/plugins/set_layout.sh v_tiles']
 
 # --- ACCORDION BINDINGS ---
 # Horizontal Accordion
