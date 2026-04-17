@@ -1,7 +1,8 @@
 #!/bin/bash
 
 brew=(
-  icon=􀐚
+  icon=󱄖
+  icon.font="$FONT:Bold:16.0"
   label=?
   padding_right=10
   update_freq=120

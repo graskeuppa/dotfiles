@@ -12,21 +12,21 @@ IS_FULLSCREEN=$(aerospace list-windows --focused --format "%{window-is-fullscree
 # 2. Read your custom layout states from the temp files!
 LAYOUT_STATE=$(cat "/tmp/aerospace_layout_$FOCUSED_WORKSPACE" 2>/dev/null)
 
-if [ -f "/tmp/aerospace_floating_$FOCUSED_WORKSPACE" ]; then
-  IS_FLOATING="true"
-else
-  IS_FLOATING="false"
-fi
+# if [ -f "/tmp/aerospace_floating_$FOCUSED_WORKSPACE" ]; then
+#   IS_FLOATING="true"
+# else
+#   IS_FLOATING="false"
+# fi
 
 # 3. Determine the icon and color based on the state hierarchy
 if [ "$IS_FULLSCREEN" = "true" ]; then
   # Fullscreen
   ICON=$FULLSCREEN
   COLOR=$MAUVE
-elif [ "$IS_FLOATING" = "true" ]; then
-  # Floating
-  ICON=$FLOATING
-  COLOR=$TEAL
+# elif [ "$IS_FLOATING" = "true" ]; then
+#   # Floating
+#   ICON=$FLOATING
+#   COLOR=$TEAL
 elif [[ "$LAYOUT_STATE" == *"v_accordion"* ]]; then
   # Vertical Accordion
   ICON=$V_ACCORDION

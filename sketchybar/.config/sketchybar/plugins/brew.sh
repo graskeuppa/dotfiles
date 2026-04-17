@@ -21,7 +21,7 @@ update_brew() {
   [1-9]) COLOR=$TEXT ;;
   0)
     COLOR=$GREEN
-    COUNT="􀈡"
+    COUNT="􀆅"
     ;;
   esac
 
