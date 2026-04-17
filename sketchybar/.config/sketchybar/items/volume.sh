@@ -7,7 +7,7 @@ volume_icon=(
   padding_right=10
   icon=$VOLUME_100
   icon.color=$SURFACE_2
-  icon.font="$FONT:Regular:14.0"
+  icon.font="$FONT:Regular:13.0"
   label.drawing=off
 )
 

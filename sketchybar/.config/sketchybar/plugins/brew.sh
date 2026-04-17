@@ -9,7 +9,6 @@ update_brew() {
   export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
   export HOMEBREW_NO_AUTO_UPDATE=1
 
-  # 2. MAC OS TAHOE BUG FIX: Force a new ZSH session so Ruby doesn't crash!
   RAW_OUTPUT=$(/bin/zsh -c "brew outdated 2>&1")
 
   COUNT=$(/bin/zsh -c "brew outdated 2>/dev/null | wc -l | tr -d ' '")
@@ -21,8 +20,8 @@ update_brew() {
   [1-2][0-9]) COLOR=$YELLOW ;;
   [1-9]) COLOR=$TEXT ;;
   0)
-    COLOR=$TEAL
-    COUNT="􃇽"
+    COLOR=$GREEN
+    COUNT="􀈡"
     ;;
   esac
 

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 brew=(
-  icon=􀐛
+  icon=􀐚
   label=?
   padding_right=10
   update_freq=120
