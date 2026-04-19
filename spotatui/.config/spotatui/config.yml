@@ -47,7 +47,7 @@ behavior:
   seen_announcement_ids:
   - 2026-02-27-major-refactor-complete
   shuffle_enabled: false
-  liked_icon: 􀊵
+  liked_icon: '􀊵 '
   shuffle_icon: 􀊝
   repeat_track_icon: 􀵌
   repeat_context_icon: 􀊞
