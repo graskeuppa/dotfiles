@@ -54,7 +54,7 @@ function __icon_map() {
   "Alacritty")
     icon_result=":alacritty:"
     ;;
-  "Alfred")
+  "Alfred" | "Alfred Preferences")
     icon_result=":alfred:"
     ;;
   "AltTab")
@@ -447,7 +447,7 @@ function __icon_map() {
   "Fusion")
     icon_result=":fusion:"
     ;;
-  "Games" | "CrossOver")
+  "Games")
     icon_result=":games:"
     ;;
   "System Preferences" | "System Settings" | "系统设置" | "Réglages Système" | "システム設定" | "Systemeinstellungen" | "System­einstellungen")
@@ -1140,7 +1140,7 @@ function __icon_map() {
   "Spotlight")
     icon_result=":spotlight:"
     ;;
-  "Steam" | "Steam Helper" | "steamwebhelper.exe")
+  "Steam" | "Steam Helper" | "steamwebhelper.exe" | "CrossOver")
     icon_result=":steam:"
     ;;
   "Stickies")

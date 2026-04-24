@@ -6,22 +6,23 @@ sketchybar --add event aerospace_workspace_change
 for sid in $(aerospace list-workspaces --all); do
   space=(
     icon="$sid"
-    icon.y_offset=1
+    # icon.y_offset=1
     icon.padding_left=10
     icon.padding_right=15
     padding_left=2
     padding_right=2
     label.padding_right=10
-    icon.highlight_color=$BLUE
-    label.font="sketchybar-app-font:Regular:14.0"
+    icon.highlight_color=$ACCENT
+    label.color=$SUBTEXT_1
+    label.highlight_color=$TEXT
+    label.font="sketchybar-app-font:Regular:13.0"
     # label.font="$FONT:Regular:9.0", use this for debugging the sketchybar-app-font
     label.background.height=26
     label.background.drawing=on
     label.background.color=$SURFACE_1
     label.background.corner_radius=8
     label.drawing=off
-    label.y_offset=-1
-    label.color=$TEXT
+    # label.y_offset=-1
     script="$PLUGIN_DIR/space.sh $sid"
     click_script="aerospace workspace $sid"
   )

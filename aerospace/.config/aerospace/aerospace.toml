@@ -8,8 +8,12 @@ config-version = 2
 # You can use it to add commands that run after AeroSpace startup.
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
 after-startup-command = [
-  'exec-and-forget borders hidpi=on active_color=0xff89b4fa inactive_color=0xff494d64 width=3.0 blacklist="System Settings,Finder",java,',
-  'exec-and-forget sketchybar'
+  'exec-and-forget sketchybar',
+  'exec-and-forget open -g -a mail',
+  'exec-and-forget open -g -a WhatsApp',
+  'exec-and-forget open -g -a Zen',
+  'exec-and-forget aerospace workspace 2',
+  'exec-and-forget borders hidpi=on active_color=0xfffab387 inactive_color=0x00000000 width=3.0 blacklist="System Settings,Finder,java"'
 ]
 
 
@@ -54,7 +58,7 @@ automatically-unhide-macos-hidden-apps = false
 # even when they are invisible.
 # This config version is only available since 'config-version = 2'
 # Fallback value (if you omit the key): persistent-workspaces = []
-persistent-workspaces = ["1", "2", "3", "A", "W", "S"]
+persistent-workspaces = ["1", "2", "3", "W", "S"]
 # A callback that runs every time binding mode changes
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
 # See: https://nikitabobko.github.io/AeroSpace/commands#mode
@@ -99,6 +103,10 @@ on-mode-changed = []
 [[on-window-detected]]
   if.app-id= "net.whatsapp.WhatsApp"
   run = ['move-node-to-workspace S']
+
+[[on-window-detected]]
+  if.app-id= "com.apple.mail"
+  run = ['move-node-to-workspace W']
 
 [[on-window-detected]]
   if.app-id= "com.hnc.Discord"
@@ -207,20 +215,16 @@ alt-shift-comma = ['layout accordion vertical', 'exec-and-forget ~/.config/sketc
     alt-1 = 'workspace 1'
     alt-2 = 'workspace 2'
     alt-3 = 'workspace 3'
-    alt-a = 'workspace A'
     alt-w = "workspace W"
     alt-s = 'workspace S'
     
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
-    alt-shift-1 = 'move-node-to-workspace 1'
-    alt-shift-2 = 'move-node-to-workspace 2'
-    alt-shift-3 = 'move-node-to-workspace 3'
-    alt-shift-a = 'move-node-to-workspace A'
-    alt-shift-w = "move-node-to-workspace W"
-    alt-shift-s = 'move-node-to-workspace S'
+    alt-shift-1 = ['move-node-to-workspace 1', 'workspace 1']
+    alt-shift-2 = ['move-node-to-workspace 2', 'workspace 2']
+    alt-shift-3 = ['move-node-to-workspace 3', 'workspace 3']
+    alt-shift-w = ['move-node-to-workspace W', 'workspace W']
+    alt-shift-s = ['move-node-to-workspace S', 'workspace S']
     
-
-  
     alt-shift-f = ['fullscreen', 'exec-and-forget sketchybar --trigger aerospace_mode_change']
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
@@ -237,6 +241,9 @@ alt-shift-comma = ['layout accordion vertical', 'exec-and-forget ~/.config/sketc
     esc = ['reload-config', 'mode main']
     r = ['flatten-workspace-tree', 'mode main'] # reset layout
     f = ['layout floating tiling',  'mode main']
+    s = [  'exec-and-forget sketchybar --reload',  'mode main']
+    q = [  'exec-and-forget ']
+
     backspace = ['close-all-windows-but-current', 'mode main']
 
     # sticky is not yet supported https://github.com/nikitabobko/AeroSpace/issues/2

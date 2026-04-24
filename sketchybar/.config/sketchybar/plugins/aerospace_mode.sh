@@ -22,7 +22,7 @@ LAYOUT_STATE=$(cat "/tmp/aerospace_layout_$FOCUSED_WORKSPACE" 2>/dev/null)
 if [ "$IS_FULLSCREEN" = "true" ]; then
   # Fullscreen
   ICON=$FULLSCREEN
-  COLOR=$MAUVE
+  COLOR=$PEACH
 # elif [ "$IS_FLOATING" = "true" ]; then
 #   # Floating
 #   ICON=$FLOATING
@@ -30,19 +30,19 @@ if [ "$IS_FULLSCREEN" = "true" ]; then
 elif [[ "$LAYOUT_STATE" == *"v_accordion"* ]]; then
   # Vertical Accordion
   ICON=$V_ACCORDION
-  COLOR=$LAVENDER
+  COLOR=$YELLOW
 elif [[ "$LAYOUT_STATE" == *"h_accordion"* ]]; then
   # Horizontal Accordion
   ICON=$H_ACCORDION
-  COLOR=$LAVENDER
+  COLOR=$YELLOW
 elif [[ "$LAYOUT_STATE" == *"v_tiles"* ]]; then
   # Vertical Grid
   ICON=$V_GRID
-  COLOR=$LAVENDER
+  COLOR=$YELLOW
 elif [[ "$LAYOUT_STATE" == *"h_tiles"* ]]; then
   # Horizontal Grid
   ICON=$H_GRID
-  COLOR=$LAVENDER
+  COLOR=$YELLOW
 elif [[ "$LAYOUT_STATE" == *"accordion"* ]]; then
   # Fallback just in case it only says "accordion"
   ICON=$V_ACCORDION
@@ -50,7 +50,7 @@ elif [[ "$LAYOUT_STATE" == *"accordion"* ]]; then
 else
   # Default Fallback
   ICON=$H_GRID
-  COLOR=$LAVENDER
+  COLOR=$YELLOW
 fi
 
 # Push the update to your SketchyBar item
