@@ -124,6 +124,12 @@ check-further-callbacks = true
 run = ['move-node-to-workspace 3', 'workspace 3']
 
 [[on-window-detected]]
+if.app-id = "com.mitchellh.ghostty"
+if.window-title-regex-substring = 'pomo'
+check-further-callbacks = true
+run = ['move-node-to-workspace 3', 'workspace 3']
+
+[[on-window-detected]]
 if.app-id = "com.spotify.client"
 run = ['move-node-to-workspace 3']
 
@@ -180,11 +186,9 @@ run = 'layout floating'
 
 alt-g = "exec-and-forget open -a Ghostty"
 alt-y = "exec-and-forget open -a Ghostty --args -e 'fish' '-i' '-c' 'y'"
-# alt-p = "exec-and-forget open -a Ghostty --args -n -e 'fish' '-i' '-c' 'spotify_player'"
-# alt-p= "exec-and-forget open -a Ghostty --args -e 'fish' '-i' '-c' 'spotify_player'"
-# alt-p = 'exec-and-forget open -a Ghostty --args -e /opt/homebrew/bin/spotify_player'
-
-alt-p = "exec-and-forget open -n -a Ghostty --args --title='spotatui' -e 'fish' '-i' '-c' 'spotatui'"
+alt-p = "exec-and-forget open -n -a Ghostty --args --title='spotatui' -e 'fish' '-i' '-c' 's'"
+alt-o = "exec-and-forget open -n -a Ghostty --args --title='pomo' -e 'fish' '-i' '-c' 'pomo'"
+alt-f = "exec-and-forget ~/.config/aerospace/focus.sh"
 alt-z = "exec-and-forget open -a Zen"
 # See: https://nikitabobko.github.io/AeroSpace/commands#layout
 
@@ -211,7 +215,6 @@ alt-shift-comma = [
   'layout accordion vertical',
   'exec-and-forget ~/.config/sketchybar/plugins/set_layout.sh v_accordion',
 ]
-
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#focus
 alt-h = 'focus left'
