@@ -22,7 +22,7 @@ LAYOUT_STATE=$(cat "/tmp/aerospace_layout_$FOCUSED_WORKSPACE" 2>/dev/null)
 if [ "$IS_FULLSCREEN" = "true" ]; then
   # Fullscreen
   ICON=$FULLSCREEN
-  COLOR=$PEACH
+  COLOR=$RED
 # elif [ "$IS_FLOATING" = "true" ]; then
 #   # Floating
 #   ICON=$FLOATING

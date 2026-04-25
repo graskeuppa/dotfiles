@@ -27,6 +27,7 @@ work:
     icon: ~/my/icon.png
 
 break:
+  title: Short break! Go drink some water and stretch!
   duration: 10m
 
   # will run after the session ends
@@ -40,5 +41,6 @@ longBreak:
   # number of work sessions before long break
   after: 4
 
+  title: Long break! Go exercise!
   # long break duration
   duration: 50m

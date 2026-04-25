@@ -34,7 +34,7 @@ keybindings:
 behavior:
   seek_milliseconds: 5000
   volume_increment: 10
-  volume_percent: 60
+  volume_percent: 100
   tick_rate_milliseconds: 16
   enable_text_emphasis: false
   show_loading_indicator: true

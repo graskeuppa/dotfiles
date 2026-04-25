@@ -35,6 +35,8 @@ update_windows_on_spaces() {
             *[Nn]vim* | *[Vv]im* | n | n\ *) icon=":neovim:" ;;
             *[Ss]potify* | s*) icon=":spotify:" ;;
 
+            *pomo) icon=":clock:" ;;
+
             *)
               # If it's none of the above, just show the normal Ghostty icon
               __icon_map "$app"
