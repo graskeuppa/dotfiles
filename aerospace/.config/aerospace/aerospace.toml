@@ -13,7 +13,7 @@ after-startup-command = [
   'exec-and-forget open -g -a WhatsApp',
   'exec-and-forget open -g -a Zen',
   'exec-and-forget aerospace workspace 2',
-  'exec-and-forget borders hidpi=on active_color=0xfffab387 inactive_color=0x00000000 width=3.0 blacklist="System Settings,Finder,java"',
+  'exec-and-forget borders hidpi=on active_color=0xfff9e2af inactive_color=0x00000000 width=3.0 blacklist="System Settings,Finder,java"',
 ]
 
 
@@ -114,6 +114,7 @@ run = ['move-node-to-workspace S']
 
 [[on-window-detected]]
 if.app-id = "com.mitchellh.ghostty"
+if.window-title-regex-substring = 'boo!'
 check-further-callbacks = true
 run = ['move-node-to-workspace 1']
 
@@ -184,8 +185,8 @@ run = 'layout floating'
 # '''
 
 
-alt-g = "exec-and-forget open -a Ghostty"
-alt-y = "exec-and-forget open -a Ghostty --args -e 'fish' '-i' '-c' 'y'"
+alt-g = "exec-and-forget open -n -a Ghostty --args --title='boo!'"
+alt-y = "exec-and-forget open -n -a Ghostty --args -e 'fish' '-i' '-c' 'y'"
 alt-p = "exec-and-forget open -n -a Ghostty --args --title='spotatui' -e 'fish' '-i' '-c' 's'"
 alt-o = "exec-and-forget open -n -a Ghostty --args --title='pomo' -e 'fish' '-i' '-c' 'pomo'"
 alt-f = "exec-and-forget ~/.config/aerospace/focus.sh"
