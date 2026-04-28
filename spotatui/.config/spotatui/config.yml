@@ -34,7 +34,7 @@ keybindings:
 behavior:
   seek_milliseconds: 5000
   volume_increment: 10
-  volume_percent: 100
+  volume_percent: 90
   tick_rate_milliseconds: 16
   enable_text_emphasis: false
   show_loading_indicator: true
@@ -58,7 +58,7 @@ behavior:
   dismissed_announcements: []
   relay_server_url: wss://spotatui-party.spotatui.workers.dev/ws
   stop_after_current_track: false
-  sidebar_width_percent: 0
+  sidebar_width_percent: 40
   playbar_height_rows: 6
   library_height_percent: 30
   startup_behavior: continue

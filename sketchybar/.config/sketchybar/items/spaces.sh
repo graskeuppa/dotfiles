@@ -13,8 +13,8 @@ for sid in $(aerospace list-workspaces --all); do
     padding_right=2
     label.padding_right=10
     icon.highlight_color=$ACCENT
-    label.color=$SUBTEXT_1
-    label.highlight_color=$TEXT
+    label.color=$TEXT
+    label.highlight_color=$LAVENDER
     label.font="sketchybar-app-font:Regular:13.0"
     # label.font="$FONT:Regular:9.0", use this for debugging the sketchybar-app-font
     label.background.height=26

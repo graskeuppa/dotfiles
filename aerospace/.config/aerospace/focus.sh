@@ -8,4 +8,7 @@ sleep 0.6
 open -n -a Ghostty --args --title='pomo' -e 'fish' '-i' '-c' 'pomo'
 sleep 0.6
 
+osascript -e 'tell application "System Events" to key code 49' # Spacebar
+sleep 0.6
+
 aerospace resize width +400

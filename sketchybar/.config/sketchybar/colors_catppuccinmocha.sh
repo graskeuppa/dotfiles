@@ -31,7 +31,7 @@ export SURFACE_0=0x903c3e4f #bg1->sf0
 export SURFACE_1=0x9045475a
 
 # Accent color for apple symbol and space markers
-export ACCENT=$PEACH
+export ACCENT=$YELLOW
 
 export POPUP_BACKGROUND_COLOR=0xff1e1e2e
 export POPUP_BORDER_COLOR=$BLUE
