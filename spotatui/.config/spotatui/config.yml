@@ -58,7 +58,7 @@ behavior:
   dismissed_announcements: []
   relay_server_url: wss://spotatui-party.spotatui.workers.dev/ws
   stop_after_current_track: false
-  sidebar_width_percent: 40
+  sidebar_width_percent: 25
   playbar_height_rows: 6
   library_height_percent: 30
   startup_behavior: continue
