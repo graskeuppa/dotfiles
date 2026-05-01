@@ -131,6 +131,11 @@ check-further-callbacks = true
 run = ['move-node-to-workspace 3', 'workspace 3']
 
 [[on-window-detected]]
+if.window-title-regex-substring = 'java'
+run = 'layout floating'
+
+
+[[on-window-detected]]
 if.app-id = "com.spotify.client"
 run = ['move-node-to-workspace 3']
 

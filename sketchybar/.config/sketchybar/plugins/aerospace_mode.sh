@@ -22,11 +22,7 @@ LAYOUT_STATE=$(cat "/tmp/aerospace_layout_$FOCUSED_WORKSPACE" 2>/dev/null)
 if [ "$IS_FULLSCREEN" = "true" ]; then
   # Fullscreen
   ICON=$FULLSCREEN
-  COLOR=$RED
-# elif [ "$IS_FLOATING" = "true" ]; then
-#   # Floating
-#   ICON=$FLOATING
-#   COLOR=$TEAL
+  COLOR=$LAVENDER
 elif [[ "$LAYOUT_STATE" == *"v_accordion"* ]]; then
   # Vertical Accordion
   ICON=$V_ACCORDION
@@ -45,7 +41,7 @@ elif [[ "$LAYOUT_STATE" == *"h_tiles"* ]]; then
   COLOR=$YELLOW
 elif [[ "$LAYOUT_STATE" == *"accordion"* ]]; then
   # Fallback just in case it only says "accordion"
-  ICON=$V_ACCORDION
+  ICON=$GRID
   COLOR=$PEACH
 else
   # Default Fallback
