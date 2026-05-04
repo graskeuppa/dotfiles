@@ -6,7 +6,7 @@ keybindings:
   jump_to_end: ctrl-e
   jump_to_album: a
   jump_to_artist_album: A
-  jump_to_context: o
+  jump_to_context: '!'
   manage_devices: d
   decrease_volume: '-'
   increase_volume: +
@@ -31,15 +31,17 @@ keybindings:
   open_settings: ctrl-,
   save_settings: ctrl-s
   listening_party: ctrl-p
+  like_track: F
 behavior:
   seek_milliseconds: 5000
   volume_increment: 10
-  volume_percent: 100
+  volume_percent: 70
   tick_rate_milliseconds: 16
   enable_text_emphasis: false
   show_loading_indicator: true
   enforce_wide_search_bar: true
   enable_global_song_count: false
+  disable_mouse_inputs: false
   enable_discord_rpc: false
   discord_rpc_client_id: null
   enable_announcements: true
@@ -58,9 +60,9 @@ behavior:
   dismissed_announcements: []
   relay_server_url: wss://spotatui-party.spotatui.workers.dev/ws
   stop_after_current_track: false
-  sidebar_width_percent: 25
+  sidebar_width_percent: 35
   playbar_height_rows: 6
-  library_height_percent: 25
+  library_height_percent: 20
   startup_behavior: continue
   disable_auto_update: false
   auto_update_delay: '0'

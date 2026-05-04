@@ -90,7 +90,12 @@ outer.right = 16
 
 [[on-window-detected]]
 if.app-id = "com.apple.finder"
-run = ['layout floating', 'resize width 600', 'resize height 400']
+run = [
+  'layout floating',
+  'exec-and-forget bash -c "sleep 0.2 && aerospace resize width 300 && aerospace resize height 300"',
+]
+
+# 'resize width 600', 'resize height 400']
 
 [[on-window-detected]]
 if.app-id = "NULL-APP-BUNDLE-ID"
