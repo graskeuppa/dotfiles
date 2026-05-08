@@ -167,8 +167,9 @@ keymap = [
 	{ on = [ "g", "<Space>" ], run = "cd --interactive", desc = "Jump interactively" },
 	{ on = [ "g", "f" ],       run = "follow",           desc = "Follow hovered symlink" },
 	{ on = [ "g", "p" ],       run = "cd ~/Code",        desc = "Go to ~/Code" },
-	{ on = [ "g", "n" ],       run = 'cd "/Users/gras/bollashegemony@gmail.com - Google Drive"', desc = "Go to bollashegemony Drive" },
-	{ on = [ "g", "N" ],       run = 'cd "/Users/gras/birdlandbollas@ciencias.unam.mx - Google Drive"', desc = "Go to birdland Drive" },
+	{ on = [ "g", "n" ],       run = 'cd "/Users/gras/bollashegemony@gmail.com - Google Drive/My Drive"', desc = "Go to bollashegemony Drive" },
+	{ on = [ "g", "N" ],       run = 'cd "/Users/gras/birdlandbollas@ciencias.unam.mx - Google Drive/My Drive"', desc = "Go to birdland Drive" },
+	{ on = [ "g", "v" ],       run = 'cd /Volumes/', desc = "Go to volumes" },
 
 	# Tabs
 	{ on = "t", run = "tab_create --current", desc = "Create a new tab with CWD" },
